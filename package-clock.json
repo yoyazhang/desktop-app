@@ -1,0 +1,24 @@
+{
+  "name": "desktop-test",
+  "version": "1.0.0",
+  "description": "just for test",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "package": "electron-packager . HelloWorld --win --out ../HelloWorldApp --arch=x64 --version=1.0.0 --electron-version=17.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoyazhang/desktop-app.git"
+  },
+  "author": "shihan zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoyazhang/desktop-app/issues"
+  },
+  "homepage": "https://github.com/yoyazhang/desktop-app#readme",
+  "dependencies": {
+    "electron": "^17.2.0"
+  }
+}

@@ -4,9 +4,9 @@ function createWindow(){
         width: 800,
         height: 600,
         resizable: false,
-
+        backgroundColor: '#ffffff',
         frame: false,
-        icon: "../icon/clock.png",
+        icon: "icon/goose.png",
         webPreferences:{
             backgroundThrottling: false,   //设置应用在后台正常运行
             nodeIntegration:true,     //设置能在页面使用nodejs的API
@@ -26,4 +26,4 @@ function createWindow(){
 }
 // 在ready事件触发后加载index页面
 app.whenReady().then(createWindow);
-//
+
