@@ -9,134 +9,116 @@ html,body{
     box-sizing: border-box;
 }
 
-#left{
-    width: 24em;
-    height: 20em;
-    margin: 0 auto;
+.goose{
+    width: 20em;
+    height: 16.7em;
     position: relative;
-    -webkit-animation: walk-bounce-animation 1.5s infinite;
-    animation: walk-bounce-animation 1.5s infinite;
 }
 
-#left .goose_head{
+.goose-head{
     height: 40%;
-    margin-left: 33.333%;
     width: 50%;
-    left: 17%;
     position: relative;
 }
-#left .goose_head_back {
+
+.goose_head_back {
     background-color: #eeeeee;
     border-width: 0;
     border-radius: 50% 50% 35% 35%;
     height: 100%;
     width: 68%;
 }
-#left .goose_eye{
+
+.goose_eye{
     background-color: #000;
     border-radius: 50% 50% 46% 54% / 50% 45% 55% 50%;
     display: block;
     position: absolute;
     height: 1em;
-    left: 18%;
     top: 9%;
     width: 1em;
     -webkit-animation: blink-animation 3s infinite;
     animation: blink-animation 3s infinite;
 }
-#left .goose_mouth_back {
+
+.goose_mouth_back {
     background-color: #FC7815;
     border-radius: 48%;
     display: block;
     position: absolute;
     height: 80%;
     top: 18%;
-    left: 18%;
     width: 55%;
 }
 
-#left .goose_mouth_front {
+.goose_mouth_front {
     background-color: #FC7815;
-    border-top-color:  #fc5310;
-    border-radius: 40% 45% 45% 40%;
-    border-width: 3em 1em 1em 1em;
     display: block;
     position: absolute;
     height: 60%;
     width: 60%;
     top: 36%;
-    left: 20%;
 }
 
-#left .goose_neck{
+.goose_neck{
     background: #eeeeee;
     width: 16%;
     height: 20%;
     border-radius: 50% 50% 20% 20%;
-    margin-left: 56%;
     margin-top: -6%;
-
 }
 
-#left .goose_body{
+.goose_body{
     height: 50%;
     width: 60%;
     position: relative;
 }
-#left .goose_body_mid{
+
+.goose_body_mid{
     width: 93%;
     height: 84%;
     position: absolute;
-    border-radius: 45% 40% 45% 45%;
     background-color: #eeeeee;
-    margin-left: 37%;
     margin-top: -11%;
 }
-#left .goose_left_wing{
+
+.goose_wing{
     position: absolute;
     display: block;
     height: 75%;
     width: 50%;
-    margin-left: 38%;
     margin-top: -28%;
-    border-radius: 20% 70% 50% 70%;
     background-color: #dedede;
     -webkit-animation: swing-animation 5s infinite;
     animation: swing-animation 5s infinite;
-    -webkit-transform-origin: right bottom;
-    -ms-transform-origin: right bottom;
-    transform-origin: right bottom;
 }
-#left .goose_bottom{
+
+.goose_bottom{
     position: relative;
     height: 28%;
     width: 80%;
-    left: 33%;
     top: -18%;
 }
-#left .goose_left_foot{
+
+.goose_left_foot{
     width: 15%;
     background-color: #fc5310;
     height: 50%;
     position: absolute;
     display: block;
     border-radius: 100% 100% 30% 30%;
-    -webkit-animation: left-foot-animation 3s infinite;
-    animation: left-foot-animation 3s infinite;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    animation: foot-animation 3s infinite;
+
 }
 
-#left .goose_right_foot{
+.goose_right_foot{
     width: 15%;
     background-color: #fc5310;
     height: 50%;
     position: absolute;
     display: block;
-    left: 26%;
     border-radius: 100% 100% 30% 30%;
-    -webkit-animation: right-foot-animation 3s infinite;
-    animation: right-foot-animation 3s infinite;
+    animation: foot-animation 3s infinite;
 
 }
 
@@ -183,45 +165,27 @@ html,body{
     }
 }
 
-@keyframes left-foot-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(-15deg);
-    }
-    60%{
-        transform: rotate(0deg);
-    }
-    90%{
-        transform: rotate(15deg);
-    }
-}
-
-@keyframes right-foot-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(-15deg);
-    }
-    60%{
-        transform: rotate(0deg);
-    }
-    90%{
-        transform: rotate(15deg);
-    }
-}
-
-
 @keyframes walk-bounce-animation {
     0%,
     100% {
-        -webkit-transform: translateY(0.25em);
         transform: translateY(0.25em);
     }
     50% {
-        -webkit-transform: translateY(0);
         transform: translateY(0);
+    }
+}
+
+@keyframes foot-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-15deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    90%{
+        transform: rotate(15deg);
     }
 }

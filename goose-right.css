@@ -1,0 +1,61 @@
+#right{
+    left: 90%;
+    animation: walk-bounce-animation 1.5s infinite, to-right-animation 60s infinite;
+}
+
+#right .goose_head{
+    height: 40%;
+    margin-left: 0;
+    width: 50%;
+    left: 17%;
+    position: relative;
+}
+#right .goose_eye{
+    left: 40%;
+}
+#right .goose_mouth_back {
+    left: -4%;
+}
+
+#right .goose_mouth_front {
+    border-radius: 40% 45% 45% 40%;
+    left: -13%;
+}
+
+#right .goose_neck{
+    margin-left: 30%;
+}
+
+.goose_body{
+    left: 0;
+}
+#right .goose_body_mid{
+    border-radius: 45% 45% 40% 45%;
+    position: absolute;
+    left: 38%;
+}
+#right .goose_wing{
+    position: absolute;
+    left: 80%;
+    border-radius: 70% 20% 70% 50%;
+    transform-origin: left bottom;
+}
+#right .goose_bottom{
+    left: 33%;
+}
+
+#right .goose_right_foot{
+    animation-delay: 1s;
+    left: 26%;
+}
+
+
+@keyframes to-right-animation {
+    0%{
+        left: 90%;
+    }
+
+    100%{
+        left: 0;
+    }
+}
