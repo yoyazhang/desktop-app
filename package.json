@@ -13,12 +13,13 @@
     "url": "git+https://github.com/yoyazhang/desktop-app.git"
   },
   "author": "shihan zhang",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/yoyazhang/desktop-app/issues"
   },
   "homepage": "https://github.com/yoyazhang/desktop-app#readme",
   "dependencies": {
+    "@electron/remote": "^2.0.8",
     "electron": "^17.2.0",
     "electron-drag": "latest"
   }

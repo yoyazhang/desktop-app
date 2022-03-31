@@ -1,19 +1,18 @@
-let win = require('electron').remote.getCurrentWindow();
-let el = document.getElementById('clickThroughElement');
-el.addEventListener('mouseenter', () => {
-    win.setIgnoreMouseEvents(true, { forward: true })
-});
-el.addEventListener('mouseleave', () => {
-    win.setIgnoreMouseEvents(false)
+let dino = document.getElementsByClassName("goose")[0];
+
+const remote = require('@electron/remote');
+let win = remote.getCurrentWindow();
+win.setIgnoreMouseEvents(true, { forward: true });
+window.addEventListener("mousemove", event => {
+    let flag = event.target === document.documentElement;
+    if (flag){
+        win.setIgnoreMouseEvents(true, { forward: true });
+    }
+    else {
+        win.setIgnoreMouseEvents(false);
+    }
 });
 
-let dino = document.getElementsByClassName("goose")[0];
-let drag = require('electron-drag');
-console.log(drag);
-if (drag.supported){
-    alert("ssss");
-    drag(dino);
-}
 setInterval(function () {
         if (dino.getAttribute("id") === "left"){
             dino.setAttribute("id", "right");
