@@ -1,7 +1,7 @@
 const {app, BrowserWindow} = require('electron');
 function createWindow(){
     let win = new BrowserWindow({
-        width: 500,
+        width: 1800,
         height: 600,
         title: "goose",
         transparent: true,// 透明窗口
@@ -32,4 +32,14 @@ function createWindow(){
 }
 // 在ready事件触发后加载index页面
 app.whenReady().then(createWindow);
+// window.addEventListener("mousemove", event => {
+//     let flag = event.target === document.documentElement;
+//     if (flag){
+//         win.setIgnoreMouseEvents(true, { forward: true });
+//     }
+//     else {
+//         win.setIgnoreMouseEvents(false);
+//     }
+// });
+// win.setIgnoreMouseEvents(true, { forward: true });
 

@@ -1,7 +1,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    background: black;
+    /*background: black;*/
 }
 
 * {
@@ -188,4 +188,9 @@ html,body{
     90%{
         transform: rotate(15deg);
     }
+}
+
+#function_list{
+    display: none;
+
 }
