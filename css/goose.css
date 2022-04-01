@@ -1,7 +1,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    /*background: black;*/
+    pointer-events: none;
 }
 
 * {
@@ -10,15 +10,17 @@ html,body{
 }
 
 .goose{
-    width: 20em;
-    height: 16.7em;
-    position: relative;
+    width: 10em;
+    height: 8.35em;
+    position: absolute;
+    pointer-events: auto;
+    -webkit-app-region: drag
 }
 
 .goose-head{
     height: 40%;
     width: 50%;
-    position: relative;
+    position: absolute;
 }
 
 .goose_head_back {
@@ -34,9 +36,9 @@ html,body{
     border-radius: 50% 50% 46% 54% / 50% 45% 55% 50%;
     display: block;
     position: absolute;
-    height: 1em;
+    height: 0.5em;
     top: 9%;
-    width: 1em;
+    width: 0.5em;
     -webkit-animation: blink-animation 3s infinite;
     animation: blink-animation 3s infinite;
 }
@@ -71,7 +73,7 @@ html,body{
 .goose_body{
     height: 50%;
     width: 60%;
-    position: relative;
+    position: absolute;
 }
 
 .goose_body_mid{
@@ -94,10 +96,10 @@ html,body{
 }
 
 .goose_bottom{
-    position: relative;
+    position: absolute;
     height: 28%;
     width: 80%;
-    top: -18%;
+    top: 83%;
 }
 
 .goose_left_foot{
@@ -125,7 +127,7 @@ html,body{
 @keyframes blink-animation {
     0% {
         margin-top: 0;
-        height: 1em;
+        height: 0.5em;
     }
 
     1% {
@@ -144,7 +146,7 @@ html,body{
     }
     6% {
         margin-top: 0;
-        height: 1em;
+        height: 0.5em;
     }
 }
 
@@ -188,9 +190,4 @@ html,body{
     90%{
         transform: rotate(15deg);
     }
-}
-
-#function_list{
-    display: none;
-
 }

@@ -1,6 +1,7 @@
 #right{
     left: 90%;
-    animation: walk-bounce-animation 1.5s infinite, to-right-animation 60s infinite;
+    animation: walk-bounce-animation 1.5s infinite;
+    /*to-right-animation 60s infinite;*/
 }
 
 #right .goose_head{

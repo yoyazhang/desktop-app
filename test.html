@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .move {
+            height: 100px;
+            width: 100px;
+            background: #41ffce;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .move:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div class="move"></div>
+
+<script>
+    window.onload = function () {
+        //   目标元素
+        var move = document.getElementsByClassName("move")[0];
+
+        // 鼠标按下
+        move.onmousedown = function (e) {
+            // 获取事件对象
+            var e_down = e || window.event;
+
+            //  计算鼠标点击的位置 和 目标元素之间 的偏移量
+            var x = e_down.clientX - e_down.target.offsetLeft;
+            var y = e_down.clientY - e_down.target.offsetTop;
+            // 我们想要拖拽元素，其实就是根据鼠标的移动实时的更改元素的left 和 top值
+            // 鼠标的位置是可以通过e.clientX 获取的，然后减去x 不就是我们的left值了
+
+            //鼠标移动，肯定是在按住的情况下移动的嘛
+            document.onmousemove = function(e){
+                var e_move = e || window.event;
+                left_ = e_move.clientX - x;
+                top_ = e_move.clientY - y;
+
+                // 对left_和top_添加界限
+                if(left_ < 0){
+                    left_ = 0
+                }else if(left_ > document.documentElement.clientWidth - e_down.target.offsetWidth){
+                    left_ = document.documentElement.clientWidth - e_down.target.offsetWidth
+                }
+                if(top_ < 0){
+                    top_ = 0
+                }else if(top_ > document.documentElement.clientHeight - e_down.target.offsetHeight){
+                    top_ = document.documentElement.clientHeight - e_down.target.offsetHeight
+                }
+
+                // move.setAttribute("style","top:"+top_+'px'+";left:"+left_+"px")
+                move.style.left = left_+'px';
+                move.style.top = top_+'px';
+
+            }
+            // 释放鼠标
+            move.onmouseup = function(){
+                document.onmousemove = null
+            }
+        }
+    }
+</script>
+</body>
+</html>
