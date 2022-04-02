@@ -2,6 +2,7 @@ html,body{
     height: 100%;
     width: 100%;
     pointer-events: none;
+    overflow: hidden;
 }
 
 * {
@@ -14,7 +15,8 @@ html,body{
     height: 8.35em;
     position: absolute;
     pointer-events: auto;
-    -webkit-app-region: drag
+    right: auto;
+    bottom: auto;
 }
 
 .goose-head{
