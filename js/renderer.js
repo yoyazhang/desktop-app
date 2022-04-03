@@ -45,7 +45,7 @@ function dragPicture() {
 $(document).ready(function () {
     dragPicture();
     setInterval(function () {
-        console.log("move");
+        child.stop(true);
         let disLeft = Math.random() * $(window).width();
         let disTop = Math.random() * $(window).height();
         let imgLeft = parseFloat(child.css('left'));
@@ -59,8 +59,8 @@ $(document).ready(function () {
         child.animate({
             left: disLeft + 'px',
             top:  disTop + 'px'
-        },30000);
-    }, 60000);
+        },60000);
+    }, 40000);
 });
 
 

@@ -128,3 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 /node_modules/
+/Electron桌面应用开发实践.pdf
+/goose/
